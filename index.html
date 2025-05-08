@@ -1,20 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cashew Trading Decision Tool</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <script src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
-  <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
-  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
-  <script src="https://unpkg.com/papaparse@5.3.0/papaparse.min.js"></script>
+  <title>Cashew Trading Tool</title>
 </head>
 <body>
-  <div id="root"></div>
-  <script type="text/babel" src="./cashew-trading-app.js"></script>
-  <script type="text/babel">
-    ReactDOM.render(React.createElement(CashewTradingApp), document.getElementById('root'));
+  <h1>Cashew Trading Decision Tool</h1>
+  <p>This is a basic page to test if GitHub Pages is working.</p>
+  
+  <div id="app">
+    If you can see this text, the HTML is loading but JavaScript is not running.
+  </div>
+
+  <script>
+    document.getElementById('app').innerHTML = 'If you can see this message, JavaScript is working!';
   </script>
 </body>
 </html>
