@@ -1,18 +1,42 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Cashew Trading Tool</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cashew Trading Decision Tool</title>
+  
+  <!-- Load React from CDN -->
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  
+  <!-- Load Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Load your app JavaScript -->
+  <script src="cashew-trading-app.js" defer></script>
 </head>
 <body>
-  <h1>Cashew Trading Decision Tool</h1>
-  <p>This is a basic page to test if GitHub Pages is working.</p>
+  <div id="root"></div>
   
-  <div id="app">
-    If you can see this text, the HTML is loading but JavaScript is not running.
-  </div>
-
   <script>
-    document.getElementById('app').innerHTML = 'If you can see this message, JavaScript is working!';
+    // Wait for DOM and scripts to load
+    document.addEventListener('DOMContentLoaded', function() {
+      // Make sure React and ReactDOM are loaded
+      if (typeof React !== 'undefined' && typeof ReactDOM !== 'undefined') {
+        // Check if your app is loaded
+        if (typeof window.CashewTradingApp !== 'undefined') {
+          // Render your React app
+          const rootElement = document.getElementById('root');
+          ReactDOM.render(React.createElement(window.CashewTradingApp), rootElement);
+        } else {
+          console.error('CashewTradingApp not loaded');
+          document.getElementById('root').innerHTML = '<div style="color: red; padding: 20px;">Error: Could not load the Cashew Trading App. Please check the console for details.</div>';
+        }
+      } else {
+        console.error('React or ReactDOM not loaded');
+        document.getElementById('root').innerHTML = '<div style="color: red; padding: 20px;">Error: React libraries not loaded. Please check your internet connection.</div>';
+      }
+    });
   </script>
 </body>
 </html>
