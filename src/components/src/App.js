@@ -1,5 +1,4 @@
-// Get React functions from the webpage
-const { useState } = React;
+import React, { useState } from 'react';
 
 const CashewTradingApp = () => {
   // State for all inputs and calculations
@@ -704,5 +703,3 @@ const CashewTradingApp = () => {
 };
 
 export default CashewTradingApp;
-// Make the app available to the webpage
-window.CashewTradingApp = CashewTradingApp;
